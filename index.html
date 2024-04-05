@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Is There Anybody Out There?</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <script type="module" crossorigin src="/assets/index-gqesJJsF.js"></script>
+      <link rel="stylesheet" crossorigin href="/assets/index-RNhpfdGb.css">
+    </head>
+    <body>
+    <!-- <div id="progressBarContainer"> -->
+        <!-- <label for="progress-bar">Loading...</label> -->
+        <!-- <progress id="progress-bar" value="0" max="100"></progress> -->
+    <!-- </div> -->
+    <div id="page_wrapper">
+        <!-- header -->
+        <section class="footer">
+                <div class="about">About</div>
+        </section>
+
+        <div id="about" class="d-flex align-items-center justify-content-center">
+            <div class="close_container">
+                <span id="closeAbout">&times;</span>
+            </div>
+            <div class="modalContainer container">
+                <div class="row">
+        
+                    <div class="modalTitleContainer col-md-6">
+                        <h1 class="modalTitle">About</h1>
+                        <div class="modalMainText">
+                            <p class="description">
+                                Hi, my name is Bart and the website you are currently viewing represents the final year project of my (BA) Digital Arts Degree. 
+
+                                Its core functionality is built upon the THREE.js and GSAP frameworks. 
+
+                                While THREE.js constructs the 3D environment showcased on screen, GSAP brings it to life through subtle animations.
+                                <br><br>
+                                It's worth mentioning that this website is purposefully stylized and does not strive to depict its subject matter in a realistic manner.
+
+Furthermore, certain shaders used in this project have been borrowed and customized from the following sources: <br><br>
+                                <ul>
+                                    <li><a href="https://github.com/bobbyroe/threejs-earth" target='_blank'>Fresnel and Star Shader: "threejs-earth", Bobby Roe, January 2024
+                                    </a></li>
+                                    <li><a href="https://www.youtube.com/watch?v=3krH52AhPqk" target='_blank'>Sun Shader: "Creating Sun with noise and Three.js #2", 
+                                        Yuri Artiukh, January 2021</a> </li>
+                                        <li><a href="https://www.youtube.com/watch?v=o_bEveIFfoM" target='_blank'>Galaxy Shader: "Galaxy from particles with three.js #7", 
+                                            Yuri Artiukh, June 2022</a> </li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="modalMainBody col-md-6">
+                        <img id='aboutImg' src="/assets/DSC_1471-1KMI2BnD.jpg" class="mx-auto d-block">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- main menu -->
+        <div id="main_menu">
+            <div id="title_container">
+                <h1>Is there anybody <br> <span class="highlight">out there?</span></h1>
+                <button type="button" id="start_btn">Click to begin</button>
+            </div>
+            <div id="controls" class="container-fluid">
+                <div class="row h-100">
+                    <div class="col-md-6 mouse d-flex flex-column align-items-center justify-content-top">
+                        <img src="data:image/webp;base64,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">
+                        <p> Navigate by scrolling with your mouse </p>
+                    </div>
+                    <div class="col-md-6 arrows d-flex flex-column align-items-center justify-content-top">
+                        <img src="data:image/webp;base64,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">
+                        <p> Alternatively, use the arrow keys on your keyboard</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="end_screen">
+            <div id="title_container">
+                <h1>Thanks for visiting the site. <br> <span class="highlight">Made by Bart Bielski.</span></h1>
+            </div>
+        </div>
+
+            <canvas class="webgl"></canvas>
+            <div id="app">
+                <div class='NavBar d-flex align-items-center'>
+
+                        <div class='NavBar_Inner d-flex flex-column justify-content-center'>
+                            
+                            <a class='mx-auto' href="">
+                                <div class="NavBar_Sphere"></div>
+                                <div class="progressBarVisible">
+                                    <div class="progressBarVisible_inner"></div>
+                                    <div class="progressBarNav"></div>
+                                </div>
+                            </a> 
+                            <a class='mx-auto' href="">
+                                <div class="NavBar_Sphere"></div>
+                                <div class="progressBarVisible">
+                                    <div class="progressBarVisible_inner"></div>
+                                    <div class="progressBarNav"></div>
+                                </div>
+
+                            </a> 
+                            <a class='mx-auto' href="">
+                                <div class="NavBar_Sphere"></div>
+                                <div class="progressBarVisible">
+                                    <div class="progressBarVisible_inner"></div>
+                                    <div class="progressBarNav"></div>
+                                </div>
+
+                            </a> 
+                            <a class='mx-auto' href="">
+                                <div class="NavBar_Sphere"></div>
+                                <div class="progressBarVisible">
+                                    <div class="progressBarVisible_inner"></div>
+                                    <div class="progressBarNav"></div>
+                                </div>
+
+                            </a> 
+
+                            <a class='mx-auto' href="">
+                                <div class="NavBar_Sphere"></div>
+
+                            </a> 
+
+                        </div>
+                    
+                </div>
+            
+                <div class="popUps">
+                    
+                    <div id="neptune" class="overview">
+                        <div class="close_container">
+                            <span class="close">&times;</span>
+                        </div>
+
+                        <div class="imageContainer">
+                            <img src="..\Assets\Images\Pop-ups\neptune.webp" class="coverImg">
+
+                            <div class="modalContainer">
+                                <div class="modalTitleContainer">
+                                    <h1 class="modalTitle">Neptune</h1>
+                                    <p class="stats">Ice giant | 2.795 billion miles </p>
+                                </div>
+                            
+                                <div class="modalMainBody">
+                                    <div class="modalMainText">
+                                        <p class="description">
+                                            Neptune is the eighth and farthest planet from the Sun in our solar system, and it is classified as an ice giant. It is the fourth-largest planet by diameter and the third-largest by mass. Named after the Roman god of the sea, Neptune's surface is primarily composed of hydrogen, helium, and methane, giving it a vivid blue coloration. It has a dynamic atmosphere with high-speed winds, reaching speeds of up to 1,500 miles per hour (2,400 kilometers per hour). Neptune has a complex ring system and a notable feature called the Great Dark Spot, a massive storm system similar to Jupiter's Great Red Spot. It has a total of 14 known moons, the largest of which is Triton, which is believed to be a captured Kuiper Belt object and exhibits unique features such as geysers erupting from its surface.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="uranus" class="overview">
+                        <div class="close_container">
+                            <span class="close">&times;</span>
+                        </div>
+
+                        <div class="imageContainer">
+                            <img src="..\Assets\Images\Pop-ups\uranus.webp" class="coverImg">
+
+                            <div class="modalContainer">
+                                <div class="modalTitleContainer">
+                                    <h1 class="modalTitle">Uranus</h1>
+                                    <p class="stats">Ice giant | 1.784 billion miles  </p>
+                                </div>
+                            
+                                <div class="modalMainBody">
+                                    <div class="modalMainText">
+                                        <p class="description">
+                                            Uranus is the seventh planet from the Sun in our solar system, and it is classified as an ice giant. It is the third-largest planet by diameter and the fourth-largest by mass. Named after the Greek god of the sky, Uranus has a pale blue-green coloration due to the presence of methane in its atmosphere. It has a unique rotational axis tilted almost parallel to its orbital plane, causing it to appear to roll on its side as it orbits the Sun. Uranus has a dynamic atmosphere with clouds of methane and other gases, and it experiences extreme weather patterns, including high-speed winds and powerful storms. It has a system of faint rings and a total of 27 known moons, the largest of which are Titania and Oberon. Uranus is a relatively mysterious planet, and further exploration is needed to understand its characteristics and history.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="saturn" class="overview">
+                        <div class="close_container">
+                            <span class="close">&times;</span>
+                        </div>
+
+                        <div class="imageContainer">
+                            <img src="..\Assets\Images\Pop-ups\saturn2.webp" class="coverImg">
+
+                            <div class="modalContainer">
+                                <div class="modalTitleContainer">
+                                    <h1 class="modalTitle">Saturn</h1>
+                                    <p class="stats">Gas giant | 886 million miles </p>
+                                </div>
+                            
+                                <div class="modalMainBody">
+                                    <div class="modalMainText">
+                                        <p class="description">
+                                            Saturn is the sixth planet from the Sun in our solar system, and it is classified as a gas giant. It is the second-largest planet, after Jupiter, and is known for its iconic rings, which are made up of ice particles, rocky debris, and dust. Named after the Roman god of agriculture, Saturn has a pale yellowish coloration due to the presence of ammonia crystals in its atmosphere. It has a thick layer of hydrogen and helium gas surrounding a small rocky core. Saturn's atmosphere features distinct cloud bands and swirling storms, including its famous hexagonal-shaped storm at its north pole. It has the most extensive moon system in the solar system, with over 80 confirmed moons, the largest of which is Titan. Saturn's rings are a prominent feature, consisting of thousands of individual ringlets, and they extend outwards for thousands of kilometers from the planet's surface. Saturn's rings are believed to be the remnants of a shattered moon or a failed moon formation.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="jupiter" class="overview">
+                        <div class="close_container">
+                            <span class="close">&times;</span>
+                        </div>
+
+                        <div class="imageContainer">
+                            <img src="..\Assets\Images\Pop-ups\jupiter.webp" class="coverImg">
+
+                            <div class="modalContainer">
+                                <div class="modalTitleContainer">
+                                    <h1 class="modalTitle">Jupiter</h1>
+                                    <p class="stats">Gas giant | 484 million miles </p>
+                                </div>
+                            
+                                <div class="modalMainBody">
+                                    <div class="modalMainText">
+                                        <p class="description">
+                                            Jupiter is the fifth planet from the Sun in our solar system, and it is classified as a gas giant. It is the largest planet, both by diameter and mass, in the solar system. Named after the king of the Roman gods, Jupiter has a distinctively banded appearance due to its dense atmosphere of hydrogen and helium. It has a prominent Great Red Spot, a massive storm system that has been raging for centuries. Jupiter has a strong magnetic field and a system of faint rings, though not as extensive or visible as Saturn's rings. It has a total of 79 known moons, including the four largest known as the Galilean moons: Io, Europa, Ganymede, and Callisto. Jupiter plays a crucial role in the dynamics of the solar system, influencing the orbits of nearby asteroids and comets. Its immense size and gravitational pull make it a fascinating subject for study, and it continues to reveal new insights into the formation and evolution of planetary systems.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="mars" class="overview">
+                        <div class="close_container">
+                            <span class="close">&times;</span>
+                        </div>
+
+                        <div class="imageContainer">
+                            <img src="..\Assets\Images\Pop-ups\mars.webp" class="coverImg">
+
+                            <div class="modalContainer">
+                                <div class="modalTitleContainer">
+                                    <h1 class="modalTitle">Mars</h1>
+                                    <p class="stats">Terrestrial planet (Rocky) | 142 million miles </p>
+                                </div>
+                            
+                                <div class="modalMainBody">
+                                    <div class="modalMainText">
+                                        <p class="description">
+Mars is the fourth planet from the Sun in our solar system, and it is often referred to as the "Red Planet" due to its reddish appearance. Named after the Roman god of war, Mars has intrigued humans for centuries with its potential for harboring life and its resemblance to Earth. Mars has a thin atmosphere primarily composed of carbon dioxide, with surface features including vast deserts, rocky mountains, and ancient riverbeds, suggesting the presence of liquid water in the past. It has the largest volcano in the solar system, Olympus Mons, and the longest canyon, Valles Marineris. Mars has two small moons, Phobos and Deimos, which are irregularly shaped and thought to be captured asteroids. The exploration of Mars has been a focus of many space missions, with the goal of understanding its geology, climate, and potential for past or present life.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<!-- this  -------------------------------------->
+                    <div id="earth" class="overview">
+                        <div class="close_container">
+                            <span class="close">&times;</span>
+                        </div>
+                        <div class="imageContainer">
+                            <img src="..\Assets\Images\Pop-ups\earth.webp" class="coverImg">
+
+                            <div class="modalContainer">
+                                <div class="modalTitleContainer">
+                                    <h1 class="modalTitle">Earth</h1>
+                                    <p class="stats">Terrestrial planet (Rocky) | 93 million miles </p>
+                                </div>
+                            
+                                <div class="modalMainBody">
+                                    <div class="modalMainText">
+                                        <p class="description">
+                                            Earth is the third planet from the Sun in our solar system and is the only known celestial body to harbor life. It is the densest and fifth-largest planet, with a diverse range of environments, including oceans, continents, and an atmosphere that supports life. Earth is often referred to as the "Blue Planet" due to the prevalence of water on its surface, which covers approximately 71% of its surface area. The atmosphere primarily consists of nitrogen and oxygen, along with trace amounts of other gases, creating the conditions necessary for life to thrive. Earth orbits the Sun at an average distance of about 93 million miles (150 million kilometers) and completes one orbit roughly every 365.25 days, resulting in the cycle of seasons. It has a single natural satellite, the Moon, which plays a crucial role in stabilizing Earth's axial tilt and influencing tides. Earth's dynamic geology, diverse ecosystems, and rich biodiversity make it a unique and precious planet in the universe.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<!-- this  -------------------------------------->
+
+                    <div id="venus" class="overview">
+                        <div class="close_container">
+                            <span class="close">&times;</span>
+                        </div>
+                        <div class="imageContainer">
+                            <img src="..\Assets\Images\Pop-ups\venus.webp" class="coverImg">
+
+                            <div class="modalContainer">
+                                <div class="modalTitleContainer">
+                                    <h1 class="modalTitle">Venus</h1>
+                                    <p class="stats">Terrestrial planet (Rocky) | 67 million miles </p>
+                                </div>
+                            
+                                <div class="modalMainBody">
+                                    <div class="modalMainText">
+                                        <p class="description">
+                                            Venus is the second planet from the Sun in our solar system and is often referred to as Earth's "sister planet" due to their similar size and composition. Named after the Roman goddess of love and beauty, Venus is sometimes called the "Morning Star" or the "Evening Star" because it is one of the brightest objects in the sky when visible. Venus has a thick atmosphere primarily composed of carbon dioxide, with clouds of sulfuric acid, creating a dense and opaque layer that traps heat, resulting in a runaway greenhouse effect. As a result, Venus has the hottest surface temperature of any planet in the solar system, reaching up to 900 degrees Fahrenheit (475 degrees Celsius). Venus has a relatively young surface marked by extensive volcanic plains, impact craters, and mountain ranges. It lacks active plate tectonics, which has led to the absence of continental drift and the formation of large, single landmasses. Venus has no moons and rotates very slowly on its axis, with a day lasting longer than its year. Despite its harsh conditions, Venus has been a target for exploration to better understand the processes that shape terrestrial planets.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="mercury" class="overview">
+                        <div class="close_container">
+                            <span class="close">&times;</span>
+                        </div>
+
+                        <div class="imageContainer">
+                            <img src="..\Assets\Images\Pop-ups\mercury.webp" class="coverImg">
+
+                            <div class="modalContainer">
+                                <div class="modalTitleContainer">
+                                    <h1 class="modalTitle">Mercury</h1>
+                                    <p class="stats">Terrestrial planet (Rocky) | 36 million miles </p>
+                                </div>
+                            
+                                <div class="modalMainBody">
+                                    <div class="modalMainText">
+                                        <p class="description">
+                                            Mercury is the smallest and innermost planet in our solar system, orbiting the Sun closest of all the planets. Named after the Roman messenger god, Mercury is one of the five planets visible to the naked eye from Earth. It has a heavily cratered surface, similar in appearance to Earth's Moon, with vast plains and rugged terrain. Mercury has no atmosphere to speak of, leaving its surface vulnerable to impacts from meteoroids and solar radiation. It experiences extreme temperature variations, with surface temperatures reaching up to 800 degrees Fahrenheit (430 degrees Celsius) on its sunlit side and dropping to around -290 degrees Fahrenheit (-180 degrees Celsius) in the shadowed regions. Mercury has a slow rotation, completing just over three rotations for every two orbits around the Sun, which means that a day on Mercury (one rotation) is longer than its year (one orbit around the Sun). Despite being the closest planet to the Sun, Mercury is not the hottest planet in the solar system due to its lack of atmosphere to retain heat. It has no moons and has been visited by only one spacecraft, NASA's Mariner 10 and MESSENGER missions, which provided valuable insights into its surface and composition.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<!-- galaxies ------------------------------------------------------------------->
+                    
+
+                </div>
+                <div class="Chapter_Content d-flex flex-row d-flex align-items-center justify-content-center">
+                    <div id="firstCaption">
+                        <p>Welcome to our solar system, positioned roughtly halfway from the centre of the Milky Way galaxy.</p>
+                    </div>
+
+                    <div class="captions">
+                        <p>The gravitational pull of our home star has accumulated cosmic clouds and dust into its orbit over millions of years, gradually compressing these elements into the planets we recognise today.</p>
+                    </div>
+                    <div class="captions">
+                        <p>From gas giants to water-dominated worlds and icy bodies encased in frozen shells, there is much diversity to be found within our small cosmic cluster.</p>
+                    </div>
+                    <div class="captions">
+                        <p>
+                            Among the myriad of these planets, it is Earth that, 
+                            through a seemingly random sequence of events, has allowed life to flourishing.</p>
+                    </div>
+                    <div class="captions">
+                        <p>
+                            Much of Earth's life-supporting potential can be attributed to the sun, a fiery orb of plasma and hydrogen radiating immense heat and light. With an age of approximately 4.6 billion years, it continues to sustain life on Earth and govern the dynamics of our planetary system.</p>
+                    </div>
+                    <div class="captions">
+                        <p>Contrary to its seeming uniqueness, our Sun is just one among billions of stars within the Milky Way galaxy, and a minuscule member among trillions scattered throughout the observable universe.</p>
+                    </div>
+
+
+                    <div class="captions">
+                        <p>Our ever-growing curiosity to explore the vastness of the universe has fueled the discovery of a multitude of exoplanets: worlds orbiting distant stars beyond our solar system.</p>
+                    </div>
+                    <div class="captions">
+                        <p>With some of these planets exhibiting similar favorable conditions to those found on Earth, could it be that some of these distant worlds also harbor life?</p>
+                    </div>
+                    <div class="captions">
+                        <p>Our planet is relatively young in the context of the cosmic calendar, and it is probable that other worlds have had plenty more time to allow life to emerge, evolve, and prosper.</p>
+                    </div>
+                    <div class="captions">
+                        <p>But if such is the case, why haven't we seen any signs of life?</p>
+                    </div>
+                    <div class="captions">
+                        <p>One argument proposes that civilizations are destined to perish once they attain a certain level of technological advancement. For example, this decline could manifest in the depletion of a home planet's resources.</p>
+                    </div>
+                    <div class="captions">
+                        <p>
+                            For civilizations that would acknowledge such barriers and develop the capability for interstellar travel, the vastness of the universe would still pose a significant challenge. Traveling across the Milky Way at the speed of light would take roughly 100,000 years, not to mention the myriad of unknowns found across the void of space.</p>
+                    </div>
+                    <div class="captions">
+                        <p>
+                            Perhaps some civilizations perish as a consequence of their resource-intensive explorations. Perhaps other civilizations are successful, but they may still be located too far away for us to detect any signs.</p>
+                    </div>
+                    <div class="captions">
+                        <p>Could there be an alien civilization out there, or are we alone in the universe? Are there truly no signs of life, or are we simply not yet advanced enough to detect them?</p>
+                    </div>
+                </div>
+            
+            </div>
+    </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+            
+    </body>
+</html>
