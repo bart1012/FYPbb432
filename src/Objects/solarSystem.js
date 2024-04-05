@@ -53,7 +53,7 @@ class SolarSystem{
         this.positions.push(interpolatedPoint1);
         this.solarSystemGroup.children[1].position.copy(interpolatedPoint1);
         // this.solarSystemGroup.children[1].scale.set(2,2,2);
-        this.solarSystemGroup.children[1].material = textures('../../Assets/Images/Textures/Neptune/neptune.jpg');
+        this.solarSystemGroup.children[1].material = textures('Assets/Images/Textures/Neptune/neptune.jpg');
         this.solarSystemGroup.children[1].rotation.z = -30 * Math.PI / 180;
         this.solarSystemGroup.children[1].name = 'neptune';
         this.solarSystemGroup.children[1].userData = 'neptune';
@@ -64,7 +64,7 @@ class SolarSystem{
         this.positions.push(interpolatedPoint2);
         this.solarSystemGroup.children[2].position.copy(interpolatedPoint2);
         // this.solarSystemGroup.children[2].scale.set(2,2,2);
-        this.solarSystemGroup.children[2].material = textures('../../Assets/Images/Textures/uranus/uranus.jpg');
+        this.solarSystemGroup.children[2].material = textures('Assets/Images/Textures/uranus/uranus.jpg');
         this.solarSystemGroup.children[2].rotation.z = -98 * Math.PI / 180;
         this.solarSystemGroup.children[2].name = 'uranus';
 
@@ -74,7 +74,7 @@ class SolarSystem{
         this.positions.push(interpolatedPoint3);
         this.solarSystemGroup.children[3].position.copy(interpolatedPoint3);
         this.solarSystemGroup.children[3].scale.set(2,2,2);
-        this.solarSystemGroup.children[3].material = textures('../../Assets/Images/Textures/saturn/saturn.jpg');
+        this.solarSystemGroup.children[3].material = textures('Assets/Images/Textures/saturn/saturn.jpg');
         this.solarSystemGroup.children[3].rotation.z = -27 * Math.PI / 180;
         this.solarSystemGroup.children[3].name = 'saturn';
 
@@ -83,7 +83,7 @@ class SolarSystem{
         this.positions.push(interpolatedPoint4);
         this.solarSystemGroup.children[4].position.copy(interpolatedPoint4);
         this.solarSystemGroup.children[4].scale.set(2,2,2);
-        this.solarSystemGroup.children[4].material = textures('../../Assets/Images/Textures/jupiter/jupitermap.jpg');
+        this.solarSystemGroup.children[4].material = textures('Assets/Images/Textures/jupiter/jupitermap.jpg');
         this.solarSystemGroup.children[4].rotation.z = -3 * Math.PI / 180;
         this.solarSystemGroup.children[4].name = 'jupiter';
 
@@ -93,7 +93,7 @@ class SolarSystem{
         this.positions.push(interpolatedPoint5);
         this.solarSystemGroup.children[5].position.copy(interpolatedPoint5);
         this.solarSystemGroup.children[5].scale.set(0.2,0.2,0.2);
-        this.solarSystemGroup.children[5].material = textures('../../Assets/Images/Textures/mars/mars.jpg');
+        this.solarSystemGroup.children[5].material = textures('Assets/Images/Textures/mars/mars.jpg');
         this.solarSystemGroup.children[5].rotation.z = -25 * Math.PI / 180;
         this.solarSystemGroup.children[5].name = 'mars';
 
@@ -103,7 +103,7 @@ class SolarSystem{
         this.positions.push(interpolatedPoint6);
         this.solarSystemGroup.children[6].position.copy(interpolatedPoint6);
         this.solarSystemGroup.children[6].scale.set(0.2,0.2,0.2);
-        this.solarSystemGroup.children[6].material = textures('../../Assets/Images/Textures/earth/earth.jpg');
+        this.solarSystemGroup.children[6].material = textures('Assets/Images/Textures/earth/earth.jpg');
         this.solarSystemGroup.children[6].rotation.z = -23 * Math.PI / 180;
         this.solarSystemGroup.children[6].name = 'earth';
 
@@ -112,7 +112,7 @@ class SolarSystem{
         earthClouds.position.copy(interpolatedPoint6);
         var mat = new MeshStandardMaterial({
             transparent: true,
-            map: new TextureLoader().load('../../Assets/Images/Textures/earth/earthClouds.webp'),
+            map: new TextureLoader().load('Assets/Images/Textures/earth/earthClouds.webp'),
             blending: AdditiveBlending
         });
         earthClouds.material = mat;
@@ -124,7 +124,7 @@ class SolarSystem{
         this.positions.push(interpolatedPoint7);
         this.solarSystemGroup.children[7].position.copy(interpolatedPoint7);
         this.solarSystemGroup.children[7].scale.set(0.2,0.2,0.2);
-        this.solarSystemGroup.children[7].material = textures('../../Assets/Images/Textures/venus/venus.jpg');
+        this.solarSystemGroup.children[7].material = textures('Assets/Images/Textures/venus/venus.jpg');
         this.solarSystemGroup.children[7].rotation.z = -177 * Math.PI / 180;
         this.solarSystemGroup.children[7].name = 'venus';
 
@@ -133,7 +133,7 @@ class SolarSystem{
         this.positions.push(interpolatedPoint8);
         this.solarSystemGroup.children[8].position.copy(interpolatedPoint8);
         this.solarSystemGroup.children[8].scale.set(0.1,0.1,0.1);
-        this.solarSystemGroup.children[8].material = textures('../../Assets/Images/Textures/mercury/mercury.jpg');
+        this.solarSystemGroup.children[8].material = textures('Assets/Images/Textures/mercury/mercury.jpg');
         this.solarSystemGroup.children[8].rotation.z = -0.1 * Math.PI / 180;
         this.solarSystemGroup.children[8].name = 'mercury';
 
