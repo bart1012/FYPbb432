@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Is There Anybody Out There?</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body>
+    <!-- <div id="progressBarContainer"> -->
+        <!-- <label for="progress-bar">Loading...</label> -->
+        <!-- <progress id="progress-bar" value="0" max="100"></progress> -->
+    <!-- </div> -->
+    <div id="page_wrapper">
+        <!-- header -->
+        <section class="footer">
+                <div class="about">About</div>
+        </section>
+
+        <div id="about" class="d-flex align-items-center justify-content-center">
+            <div class="close_container">
+                <span id="closeAbout">&times;</span>
+            </div>
+            <div class="modalContainer container">
+                <div class="row">
+        
+                    <div class="modalTitleContainer col-md-6">
+                        <h1 class="modalTitle">About</h1>
+                        <div class="modalMainText">
+                            <p class="description">
+                                Hi, my name is Bart and the website you are currently viewing represents the final year project of my (BA) Digital Arts Degree. 
+
+                                Its core functionality is built upon the THREE.js and GSAP frameworks. 
+
+                                While THREE.js constructs the 3D environment showcased on screen, GSAP brings it to life through subtle animations.
+                                <br><br>
+                                It's worth mentioning that this website is purposefully stylized and does not strive to depict its subject matter in a realistic manner.
+
+Furthermore, certain shaders used in this project have been borrowed and customized from the following sources: <br><br>
+                                <ul>
+                                    <li><a href="https://github.com/bobbyroe/threejs-earth" target='_blank'>Fresnel and Star Shader: "threejs-earth", Bobby Roe, January 2024
+                                    </a></li>
+                                    <li><a href="https://www.youtube.com/watch?v=3krH52AhPqk" target='_blank'>Sun Shader: "Creating Sun with noise and Three.js #2", 
+                                        Yuri Artiukh, January 2021</a> </li>
+                                        <li><a href="https://www.youtube.com/watch?v=o_bEveIFfoM" target='_blank'>Galaxy Shader: "Galaxy from particles with three.js #7", 
+                                            Yuri Artiukh, June 2022</a> </li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="modalMainBody col-md-6">
+                        <img id='aboutImg' src="/Assets/Images/about/DSC_1471.jpg" class="mx-auto d-block">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- main menu -->
+        <div id="main_menu">
+            <div id="title_container">
+                <h1>Is there anybody <br> <span class="highlight">out there?</span></h1>
+                <button type="button" id="start_btn">Click to begin</button>
+            </div>
+            <div id="controls" class="container-fluid">
+                <div class="row h-100">
+                    <div class="col-md-6 mouse d-flex flex-column align-items-center justify-content-top">
+                        <img src="/Assets/Images/icons/mouse.webp">
+                        <p> Navigate by scrolling with your mouse </p>
+                    </div>
+                    <div class="col-md-6 arrows d-flex flex-column align-items-center justify-content-top">
+                        <img src="/Assets/Images/icons/arrows.webp">
+                        <p> Alternatively, use the arrow keys on your keyboard</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="end_screen">
+            <div id="title_container">
+                <h1>Thanks for visiting the site. <br> <span class="highlight">Made by Bart Bielski.</span></h1>
+            </div>
+        </div>
+
+            <canvas class="webgl"></canvas>
+            <div id="app">
+                <div class='NavBar d-flex align-items-center'>
+
+                        <div class='NavBar_Inner d-flex flex-column justify-content-center'>
+                            
+                            <a class='mx-auto' href="">
+                                <div class="NavBar_Sphere"></div>
+                                <div class="progressBarVisible">
+                                    <div class="progressBarVisible_inner"></div>
+                                    <div class="progressBarNav"></div>
+                                </div>
+                            </a> 
+                            <a class='mx-auto' href="">
+                                <div class="NavBar_Sphere"></div>
+                                <div class="progressBarVisible">
+                                    <div class="progressBarVisible_inner"></div>
+                                    <div class="progressBarNav"></div>
+                                </div>
+
+                            </a> 
+                            <a class='mx-auto' href="">
+                                <div class="NavBar_Sphere"></div>
+                                <div class="progressBarVisible">
+                                    <div class="progressBarVisible_inner"></div>
+                                    <div class="progressBarNav"></div>
+                                </div>
+
+                            </a> 
+                            <a class='mx-auto' href="">
+                                <div class="NavBar_Sphere"></div>
+                                <div class="progressBarVisible">
+                                    <div class="progressBarVisible_inner"></div>
+                                    <div class="progressBarNav"></div>
+                                </div>
+
+                            </a> 
+
+                            <a class='mx-auto' href="">
+                                <div class="NavBar_Sphere"></div>
+
+                            </a> 
+
+                        </div>
+                    
+                </div>
+            
+                <div class="popUps">
+                    
+                    <div id="neptune" class="overview">
+                        <div class="close_container">
+                            <span class="close">&times;</span>
+                        </div>
+
+                        <div class="imageContainer">
+                            <img src="..\Assets\Images\Pop-ups\neptune.webp" class="coverImg">
+
+                            <div class="modalContainer">
+                                <div class="modalTitleContainer">
+                                    <h1 class="modalTitle">Neptune</h1>
+                                    <p class="stats">Ice giant | 2.795 billion miles </p>
+                                </div>
+                            
+                                <div class="modalMainBody">
+                                    <div class="modalMainText">
+                                        <p class="description">
+                                            Neptune is the eighth and farthest planet from the Sun in our solar system, and it is classified as an ice giant. It is the fourth-largest planet by diameter and the third-largest by mass. Named after the Roman god of the sea, Neptune's surface is primarily composed of hydrogen, helium, and methane, giving it a vivid blue coloration. It has a dynamic atmosphere with high-speed winds, reaching speeds of up to 1,500 miles per hour (2,400 kilometers per hour). Neptune has a complex ring system and a notable feature called the Great Dark Spot, a massive storm system similar to Jupiter's Great Red Spot. It has a total of 14 known moons, the largest of which is Triton, which is believed to be a captured Kuiper Belt object and exhibits unique features such as geysers erupting from its surface.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="uranus" class="overview">
+                        <div class="close_container">
+                            <span class="close">&times;</span>
+                        </div>
+
+                        <div class="imageContainer">
+                            <img src="..\Assets\Images\Pop-ups\uranus.webp" class="coverImg">
+
+                            <div class="modalContainer">
+                                <div class="modalTitleContainer">
+                                    <h1 class="modalTitle">Uranus</h1>
+                                    <p class="stats">Ice giant | 1.784 billion miles  </p>
+                                </div>
+                            
+                                <div class="modalMainBody">
+                                    <div class="modalMainText">
+                                        <p class="description">
+                                            Uranus is the seventh planet from the Sun in our solar system, and it is classified as an ice giant. It is the third-largest planet by diameter and the fourth-largest by mass. Named after the Greek god of the sky, Uranus has a pale blue-green coloration due to the presence of methane in its atmosphere. It has a unique rotational axis tilted almost parallel to its orbital plane, causing it to appear to roll on its side as it orbits the Sun. Uranus has a dynamic atmosphere with clouds of methane and other gases, and it experiences extreme weather patterns, including high-speed winds and powerful storms. It has a system of faint rings and a total of 27 known moons, the largest of which are Titania and Oberon. Uranus is a relatively mysterious planet, and further exploration is needed to understand its characteristics and history.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="saturn" class="overview">
+                        <div class="close_container">
+                            <span class="close">&times;</span>
+                        </div>
+
+                        <div class="imageContainer">
+                            <img src="..\Assets\Images\Pop-ups\saturn2.webp" class="coverImg">
+
+                            <div class="modalContainer">
+                                <div class="modalTitleContainer">
+                                    <h1 class="modalTitle">Saturn</h1>
+                                    <p class="stats">Gas giant | 886 million miles </p>
+                                </div>
+                            
+                                <div class="modalMainBody">
+                                    <div class="modalMainText">
+                                        <p class="description">
+                                            Saturn is the sixth planet from the Sun in our solar system, and it is classified as a gas giant. It is the second-largest planet, after Jupiter, and is known for its iconic rings, which are made up of ice particles, rocky debris, and dust. Named after the Roman god of agriculture, Saturn has a pale yellowish coloration due to the presence of ammonia crystals in its atmosphere. It has a thick layer of hydrogen and helium gas surrounding a small rocky core. Saturn's atmosphere features distinct cloud bands and swirling storms, including its famous hexagonal-shaped storm at its north pole. It has the most extensive moon system in the solar system, with over 80 confirmed moons, the largest of which is Titan. Saturn's rings are a prominent feature, consisting of thousands of individual ringlets, and they extend outwards for thousands of kilometers from the planet's surface. Saturn's rings are believed to be the remnants of a shattered moon or a failed moon formation.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="jupiter" class="overview">
+                        <div class="close_container">
+                            <span class="close">&times;</span>
+                        </div>
+
+                        <div class="imageContainer">
+                            <img src="..\Assets\Images\Pop-ups\jupiter.webp" class="coverImg">
+
+                            <div class="modalContainer">
+                                <div class="modalTitleContainer">
+                                    <h1 class="modalTitle">Jupiter</h1>
+                                    <p class="stats">Gas giant | 484 million miles </p>
+                                </div>
+                            
+                                <div class="modalMainBody">
+                                    <div class="modalMainText">
+                                        <p class="description">
+                                            Jupiter is the fifth planet from the Sun in our solar system, and it is classified as a gas giant. It is the largest planet, both by diameter and mass, in the solar system. Named after the king of the Roman gods, Jupiter has a distinctively banded appearance due to its dense atmosphere of hydrogen and helium. It has a prominent Great Red Spot, a massive storm system that has been raging for centuries. Jupiter has a strong magnetic field and a system of faint rings, though not as extensive or visible as Saturn's rings. It has a total of 79 known moons, including the four largest known as the Galilean moons: Io, Europa, Ganymede, and Callisto. Jupiter plays a crucial role in the dynamics of the solar system, influencing the orbits of nearby asteroids and comets. Its immense size and gravitational pull make it a fascinating subject for study, and it continues to reveal new insights into the formation and evolution of planetary systems.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="mars" class="overview">
+                        <div class="close_container">
+                            <span class="close">&times;</span>
+                        </div>
+
+                        <div class="imageContainer">
+                            <img src="..\Assets\Images\Pop-ups\mars.webp" class="coverImg">
+
+                            <div class="modalContainer">
+                                <div class="modalTitleContainer">
+                                    <h1 class="modalTitle">Mars</h1>
+                                    <p class="stats">Terrestrial planet (Rocky) | 142 million miles </p>
+                                </div>
+                            
+                                <div class="modalMainBody">
+                                    <div class="modalMainText">
+                                        <p class="description">
+Mars is the fourth planet from the Sun in our solar system, and it is often referred to as the "Red Planet" due to its reddish appearance. Named after the Roman god of war, Mars has intrigued humans for centuries with its potential for harboring life and its resemblance to Earth. Mars has a thin atmosphere primarily composed of carbon dioxide, with surface features including vast deserts, rocky mountains, and ancient riverbeds, suggesting the presence of liquid water in the past. It has the largest volcano in the solar system, Olympus Mons, and the longest canyon, Valles Marineris. Mars has two small moons, Phobos and Deimos, which are irregularly shaped and thought to be captured asteroids. The exploration of Mars has been a focus of many space missions, with the goal of understanding its geology, climate, and potential for past or present life.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<!-- this  -------------------------------------->
+                    <div id="earth" class="overview">
+                        <div class="close_container">
+                            <span class="close">&times;</span>
+                        </div>
+                        <div class="imageContainer">
+                            <img src="..\Assets\Images\Pop-ups\earth.webp" class="coverImg">
+
+                            <div class="modalContainer">
+                                <div class="modalTitleContainer">
+                                    <h1 class="modalTitle">Earth</h1>
+                                    <p class="stats">Terrestrial planet (Rocky) | 93 million miles </p>
+                                </div>
+                            
+                                <div class="modalMainBody">
+                                    <div class="modalMainText">
+                                        <p class="description">
+                                            Earth is the third planet from the Sun in our solar system and is the only known celestial body to harbor life. It is the densest and fifth-largest planet, with a diverse range of environments, including oceans, continents, and an atmosphere that supports life. Earth is often referred to as the "Blue Planet" due to the prevalence of water on its surface, which covers approximately 71% of its surface area. The atmosphere primarily consists of nitrogen and oxygen, along with trace amounts of other gases, creating the conditions necessary for life to thrive. Earth orbits the Sun at an average distance of about 93 million miles (150 million kilometers) and completes one orbit roughly every 365.25 days, resulting in the cycle of seasons. It has a single natural satellite, the Moon, which plays a crucial role in stabilizing Earth's axial tilt and influencing tides. Earth's dynamic geology, diverse ecosystems, and rich biodiversity make it a unique and precious planet in the universe.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<!-- this  -------------------------------------->
+
+                    <div id="venus" class="overview">
+                        <div class="close_container">
+                            <span class="close">&times;</span>
+                        </div>
+                        <div class="imageContainer">
+                            <img src="..\Assets\Images\Pop-ups\venus.webp" class="coverImg">
+
+                            <div class="modalContainer">
+                                <div class="modalTitleContainer">
+                                    <h1 class="modalTitle">Venus</h1>
+                                    <p class="stats">Terrestrial planet (Rocky) | 67 million miles </p>
+                                </div>
+                            
+                                <div class="modalMainBody">
+                                    <div class="modalMainText">
+                                        <p class="description">
+                                            Venus is the second planet from the Sun in our solar system and is often referred to as Earth's "sister planet" due to their similar size and composition. Named after the Roman goddess of love and beauty, Venus is sometimes called the "Morning Star" or the "Evening Star" because it is one of the brightest objects in the sky when visible. Venus has a thick atmosphere primarily composed of carbon dioxide, with clouds of sulfuric acid, creating a dense and opaque layer that traps heat, resulting in a runaway greenhouse effect. As a result, Venus has the hottest surface temperature of any planet in the solar system, reaching up to 900 degrees Fahrenheit (475 degrees Celsius). Venus has a relatively young surface marked by extensive volcanic plains, impact craters, and mountain ranges. It lacks active plate tectonics, which has led to the absence of continental drift and the formation of large, single landmasses. Venus has no moons and rotates very slowly on its axis, with a day lasting longer than its year. Despite its harsh conditions, Venus has been a target for exploration to better understand the processes that shape terrestrial planets.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="mercury" class="overview">
+                        <div class="close_container">
+                            <span class="close">&times;</span>
+                        </div>
+
+                        <div class="imageContainer">
+                            <img src="..\Assets\Images\Pop-ups\mercury.webp" class="coverImg">
+
+                            <div class="modalContainer">
+                                <div class="modalTitleContainer">
+                                    <h1 class="modalTitle">Mercury</h1>
+                                    <p class="stats">Terrestrial planet (Rocky) | 36 million miles </p>
+                                </div>
+                            
+                                <div class="modalMainBody">
+                                    <div class="modalMainText">
+                                        <p class="description">
+                                            Mercury is the smallest and innermost planet in our solar system, orbiting the Sun closest of all the planets. Named after the Roman messenger god, Mercury is one of the five planets visible to the naked eye from Earth. It has a heavily cratered surface, similar in appearance to Earth's Moon, with vast plains and rugged terrain. Mercury has no atmosphere to speak of, leaving its surface vulnerable to impacts from meteoroids and solar radiation. It experiences extreme temperature variations, with surface temperatures reaching up to 800 degrees Fahrenheit (430 degrees Celsius) on its sunlit side and dropping to around -290 degrees Fahrenheit (-180 degrees Celsius) in the shadowed regions. Mercury has a slow rotation, completing just over three rotations for every two orbits around the Sun, which means that a day on Mercury (one rotation) is longer than its year (one orbit around the Sun). Despite being the closest planet to the Sun, Mercury is not the hottest planet in the solar system due to its lack of atmosphere to retain heat. It has no moons and has been visited by only one spacecraft, NASA's Mariner 10 and MESSENGER missions, which provided valuable insights into its surface and composition.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<!-- galaxies ------------------------------------------------------------------->
+                    
+
+                </div>
+                <div class="Chapter_Content d-flex flex-row d-flex align-items-center justify-content-center">
+                    <div id="firstCaption">
+                        <p>Welcome to our solar system, positioned roughtly halfway from the centre of the Milky Way galaxy.</p>
+                    </div>
+
+                    <div class="captions">
+                        <p>The gravitational pull of our home star has accumulated cosmic clouds and dust into its orbit over millions of years, gradually compressing these elements into the planets we recognise today.</p>
+                    </div>
+                    <div class="captions">
+                        <p>From gas giants to water-dominated worlds and icy bodies encased in frozen shells, there is much diversity to be found within our small cosmic cluster.</p>
+                    </div>
+                    <div class="captions">
+                        <p>
+                            Among the myriad of these planets, it is Earth that, 
+                            through a seemingly random sequence of events, has allowed life to flourishing.</p>
+                    </div>
+                    <div class="captions">
+                        <p>
+                            Much of Earth's life-supporting potential can be attributed to the sun, a fiery orb of plasma and hydrogen radiating immense heat and light. With an age of approximately 4.6 billion years, it continues to sustain life on Earth and govern the dynamics of our planetary system.</p>
+                    </div>
+                    <div class="captions">
+                        <p>Contrary to its seeming uniqueness, our Sun is just one among billions of stars within the Milky Way galaxy, and a minuscule member among trillions scattered throughout the observable universe.</p>
+                    </div>
+
+
+                    <div class="captions">
+                        <p>Our ever-growing curiosity to explore the vastness of the universe has fueled the discovery of a multitude of exoplanets: worlds orbiting distant stars beyond our solar system.</p>
+                    </div>
+                    <div class="captions">
+                        <p>With some of these planets exhibiting similar favorable conditions to those found on Earth, could it be that some of these distant worlds also harbor life?</p>
+                    </div>
+                    <div class="captions">
+                        <p>Our planet is relatively young in the context of the cosmic calendar, and it is probable that other worlds have had plenty more time to allow life to emerge, evolve, and prosper.</p>
+                    </div>
+                    <div class="captions">
+                        <p>But if such is the case, why haven't we seen any signs of life?</p>
+                    </div>
+                    <div class="captions">
+                        <p>One argument proposes that civilizations are destined to perish once they attain a certain level of technological advancement. For example, this decline could manifest in the depletion of a home planet's resources.</p>
+                    </div>
+                    <div class="captions">
+                        <p>
+                            For civilizations that would acknowledge such barriers and develop the capability for interstellar travel, the vastness of the universe would still pose a significant challenge. Traveling across the Milky Way at the speed of light would take roughly 100,000 years, not to mention the myriad of unknowns found across the void of space.</p>
+                    </div>
+                    <div class="captions">
+                        <p>
+                            Perhaps some civilizations perish as a consequence of their resource-intensive explorations. Perhaps other civilizations are successful, but they may still be located too far away for us to detect any signs.</p>
+                    </div>
+                    <div class="captions">
+                        <p>Could there be an alien civilization out there, or are we alone in the universe? Are there truly no signs of life, or are we simply not yet advanced enough to detect them?</p>
+                    </div>
+                </div>
+            
+            </div>
+    </div>
+        <script type="module" src="src/main.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+            
+    </body>
+</html>
